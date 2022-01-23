@@ -13,7 +13,7 @@ spec:
         spec:
             containers:
             - name: web
-              image: niccolas1987/conversao-temperatura:v2
+              image: niccolas1987/conversao-temperatura
               ports:
                 - containerPort: 8080                
 ---
