@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: meudeployment
+    name: conversao-temperatura
 spec:
     selector:
         matchLabels:
-            app: web
+            app: conversao-temperatura
     template:
         metadata:
             labels:
-                app: web
+                app: conversao-temperatura
         spec:
             containers:
             - name: web
@@ -20,10 +20,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-    name: web
+    name: conversao-temperatura
 spec:
     selector:
-        app: web
+        app: conversao-temperatura
     ports:
         - port: 80
           targetPort: 8080
